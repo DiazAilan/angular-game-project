@@ -1,0 +1,53 @@
+.monster-card-title {
+	text-transform: capitalize;
+}
+
+.monster-selector {
+	text-transform: capitalize;
+}
+
+stat-bar {
+}
+
+.stat-bar {
+	transition: all, 0.5s;
+	border: solid 1px;
+	border-radius: 4px;
+	height: 20px;
+	text-align: center;
+}
+
+.stat-bar-label {
+	text-transform: capitalize;
+	display: inline-block;
+}
+
+.stat-bar-life {
+	background-color: #e2b926;
+	border-color: #d2be31;
+}
+
+.stat-bar-pow {
+	background-color: #e22110;
+	border-color: #b80b1d;
+}
+
+.stat-bar-life {
+	background-color: #e2b926;
+	border-color: #d2be31;
+}
+
+.stat-bar-life {
+	background-color: #e2b926;
+	border-color: #d2be31;
+}
+
+.stat-bar-life {
+	background-color: #e2b926;
+	border-color: #d2be31;
+}
+
+.stat-bar-life {
+	background-color: #e2b926;
+	border-color: #d2be31;
+}

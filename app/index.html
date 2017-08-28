@@ -3,15 +3,31 @@
 <head>
 	<meta charset="utf-8">
 	<title>Angular Game Project</title>
+
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body ng-app="gameApp">
 
 	<div ng-controller="mainCtrl">
-		<h1>Algo para decir</h1>
-		<h2>{{monsterBook.plant}}</h2>
+		<h1>Monster selector</h1>
+		<label>Choose breeds: </label>
+		<select class="monster-selector" type="text" name="monster" ng-model="monsterSelectorMain" ng-change="generateMonster()">
+			<option ng-repeat="(key, value) in monsterBook" value="{{key}}">{{key}}</option>
+		</select>
+		<select class="monster-selector" type="text" name="monster" ng-model="monsterSelectorSub" ng-change="generateMonster()">
+			<option ng-repeat="(key, value) in monsterBook" value="{{key}}">{{key}}</option>
+		</select>
+		<div ng-show="monster" class="monster-card">
+			<monster-card monster="monster">
+		</div>
 	</div>
 
 	<script src="vendor/angular.min.js"></script>
 	<script src="app.js"></script>
+
+	<script src="monster-book.service.js"></script>
+
+	<script src="monster-card/monster-card.component.js"></script>
+	<script src="monster-card/stat-bar/stat-bar.component.js"></script>
 </body>
 </html>
