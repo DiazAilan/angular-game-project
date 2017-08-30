@@ -21,15 +21,27 @@
 				return main + " " + sub;
 			}
 
+			function generateSpecialProperty(main, sub) {
+				if (main === sub) {
+					return main
+				} else if(main) {
+					return 'lesser ' + main
+				} else if(sub) {
+					return 'minor ' + sub
+				} else {
+					return ''
+				}
+			}
+
 			const skill = {
 				name: generateSignatureName(mainSkill.name, subSkill.name),
 				type: mainSkill.type,
-				cost: Math.floor((mainSkill.cost + subSkill.cost) / 2),
-				dmg: (mainSkill.dmg + subSkill.dmg) / 2,
-				hit: (mainSkill.hit + subSkill.hit) / 2,
-				wit: (mainSkill.wit + subSkill.wit) / 2,
-				crt: (mainSkill.crt + subSkill.crt) / 2,
-				special: mainSkill.special
+				cost: Math.round((mainSkill.cost*3 + subSkill.cost*2) / 5),
+				dmg: Math.round((mainSkill.dmg*3 + subSkill.dmg*2)) / 5,
+				hit: Math.round((mainSkill.hit*3 + subSkill.hit*2)) / 5,
+				wit: Math.round((mainSkill.wit*3 + subSkill.wit*2)) / 5,
+				crt: Math.round((mainSkill.crt*3 + subSkill.crt*2)) / 5,
+				special: generateSpecialProperty(mainSkill.special, subSkill.special)
 			}
 
 			return skill;

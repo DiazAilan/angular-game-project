@@ -6,3 +6,5 @@
 <stat-bar stat="$ctrl.monster.ski" type="ski"></stat-bar>
 <stat-bar stat="$ctrl.monster.spe" type="spe"></stat-bar>
 <stat-bar stat="$ctrl.monster.def" type="def"></stat-bar>
+
+<span ng-repeat="(key, value) in $ctrl.monster.skills[4]" ng-show="value">{{key}}: {{value}}<br></span>

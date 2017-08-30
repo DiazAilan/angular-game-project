@@ -98,14 +98,13 @@ angular.module("gameApp")
 					wit: 40,
 					crt: 100
 				},{
-					name: "Bone Breaker",
-					type: 'int',
-					cost: 50,
-					dmg: 60,
-					hit: 60,
-					wit: 0,
-					crt: 0,
-					special: "lifesteal"
+					name: "Fist Cyclone",
+					type: 'pow',
+					cost: 55,
+					dmg: 120,
+					hit: 20,
+					wit: 60,
+					crt: 40,
 				}
 			]
 
@@ -152,14 +151,13 @@ angular.module("gameApp")
 					wit: 40,
 					crt: 100
 				},{
-					name: "Lightning Storm",
+					name: "Stabbing Roar",
 					type: 'int',
-					cost: 50,
-					dmg: 60,
-					hit: 60,
-					wit: 0,
-					crt: 0,
-					special: "lifesteal"
+					cost: 40,
+					dmg: 80,
+					hit: 20,
+					wit: 100,
+					crt: 60,
 				}
 			]
 		}
